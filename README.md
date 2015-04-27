@@ -6,19 +6,19 @@ python app for check invalid bookmark
 
 Create python virtual environment:
 
-```python
+```bash
 $ python3 -m venv VENV
 ```
 
 Start the virtual environment:
 
-```python
+```bash
 $ source VENV/bin/activate
 ```
 
 And then install from requirement.txt:
 
-```python
+```bash
 $ pip install -r requirement.txt
 ```
 
@@ -27,7 +27,7 @@ $ pip install -r requirement.txt
 
 1. Before you use it, start the virtual environment
 
-   ```python
+   ```bash
    $ source VENV/bin/activate
    ```
 
@@ -35,7 +35,7 @@ $ pip install -r requirement.txt
 
 3. Execute apps
 
-   ```python
+   ```bash
    $ python script.py
    ```
 
