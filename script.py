@@ -34,6 +34,6 @@ while num < length:
     f.write(errMess + '\n')
     f.flush()
   else: #r.status_code === 200
-    print('Processing in [' + str(num) + '].. : ' + str(content[num]))
+    print('Processing in ' + str(num) + '/' + str(length) + '.. ', end='\r')
   num+=1
 f.close()
