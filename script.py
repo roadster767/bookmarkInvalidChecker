@@ -27,6 +27,7 @@ while num < length:
     errMess = 'Error in [' + str(num) + ']: ' + str(content[num])
     print( errMess.rstrip('\n') )
     f.write( errMess )
+    f.flush()
   else: #r.status_code === 200
     print('Processing in [' + str(num) + ']..', end='\r')
   num+=1
