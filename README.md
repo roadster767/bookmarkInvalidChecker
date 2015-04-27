@@ -31,7 +31,7 @@ $ pip install -r requirement.txt
    $ source VENV/bin/activate
    ```
 
-2. Put your input file in the directory
+2. Download your Google Chrome bookmarks.html, and put it in the directory
 
 3. Execute apps
 
