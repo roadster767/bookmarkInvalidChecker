@@ -10,7 +10,7 @@ Create python virtual environment:
 $ python3 -m venv VENV
 ```
 
-And start the virtual environment
+Start the virtual environment:
 
 ```python
 $ source VENV/bin/active
