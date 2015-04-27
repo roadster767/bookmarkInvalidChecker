@@ -1,21 +1,26 @@
 import requests
 import sys
+import re
 
-with open('input.txt') as f:
-    content = f.readlines()
-f.close()
+if len(sys.argv) != 2:
+  print("argv error")
+  sys.exit()
+textfile = open(sys.argv[1], 'r')
+filetext = textfile.read()
+textfile.close()
+content = re.findall(r'HREF="([^"]*)"', filetext)
 
-#length = len(content)
-#print(length)
+#with open('input.txt') as f:
+#    content = f.readlines()
+#f.close()
 
-#content = ['http://www.apertus.com.tw/','http://www.google.com.t','http://www.yahoo.com.w']
 length = len(content)
 num = 0
 
 f = open('errorLog', 'w')
 while num < length:
   try:  
-    r = requests.get(''+str(content[num].rstrip('\n')))
+    r = requests.get(''+str(content[num].rstrip('\n')), timeout=10.0)
   #except requests.exceptions.ConnectionError:    
   #  errMess = 'Connect Error in: ' + str(content[num])
   #  print( errMess.rstrip('\n') )
@@ -23,12 +28,12 @@ while num < length:
   except:
     e = sys.exc_info()[0]
     print(e)
-    f.write(str(e))
+    f.write(str(e) + '\n')
     errMess = 'Error in [' + str(num) + ']: ' + str(content[num])
-    print( errMess.rstrip('\n') )
-    f.write( errMess )
+    print(errMess.rstrip('\n'))
+    f.write(errMess + '\n')
     f.flush()
   else: #r.status_code === 200
-    print('Processing in [' + str(num) + ']..', end='\r')
+    print('Processing in [' + str(num) + '].. : ' + str(content[num]))
   num+=1
 f.close()

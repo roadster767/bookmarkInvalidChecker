@@ -1,4 +1,4 @@
-# Bookmark Invalid Checker
+# Google Chrome Bookmark Invalid Checker
 
 python app for check invalid bookmark 
 
@@ -36,6 +36,6 @@ $ pip install -r requirement.txt
 3. Execute apps
 
    ```bash
-   $ python script.py
+   $ python script.py bookmarks_from_chrome.html
    ```
 

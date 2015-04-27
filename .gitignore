@@ -1,5 +1,5 @@
 VENV/
 *.DS_Store
+*.html
 errorLog
-input.txt
 note.txt
