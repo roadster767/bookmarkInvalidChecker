@@ -27,15 +27,15 @@ $ pip install -r requirement.txt
 
 1. Before you use it, start the virtual environment
 
-```python
-$ source VENV/bin/active
-```
+   ```python
+   $ source VENV/bin/active
+   ```
 
 2. Put your input file in the directory
 
 3. Execute apps
 
-```python
-$ python script.py
-```
+   ```python
+   $ python script.py
+   ```
 
