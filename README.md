@@ -13,7 +13,7 @@ $ python3 -m venv VENV
 Start the virtual environment:
 
 ```python
-$ source VENV/bin/active
+$ source VENV/bin/activate
 ```
 
 And then install from requirement.txt:
@@ -28,7 +28,7 @@ $ pip install -r requirement.txt
 1. Before you use it, start the virtual environment
 
    ```python
-   $ source VENV/bin/active
+   $ source VENV/bin/activate
    ```
 
 2. Put your input file in the directory
