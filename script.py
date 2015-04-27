@@ -12,7 +12,7 @@ f.close()
 length = len(content)
 num = 0
 
-f = open('errLog', 'w')
+f = open('errorLog', 'w')
 while num < length:
   try:  
     r = requests.get(''+str(content[num].rstrip('\n')))
@@ -24,10 +24,10 @@ while num < length:
     e = sys.exc_info()[0]
     print(e)
     f.write(str(e))
-    errMess = 'Connect Error in: ' + str(content[num])
+    errMess = 'Error in [' + str(num) + ']: ' + str(content[num])
     print( errMess.rstrip('\n') )
     f.write( errMess )
   else: #r.status_code === 200
-    print('Processing in: ' + str(num))
+    print('Processing in [' + str(num) + ']..', end='\r')
   num+=1
 f.close()

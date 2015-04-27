@@ -1,0 +1,1 @@
+grep -o -e "HREF=\"\([^\"]\)*\"" bookmarks_2015_4_27.html | sed 's/HREF="//g' | sed 's/"//g' > input.txt
